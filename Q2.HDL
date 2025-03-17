@@ -1,0 +1,10 @@
+CHIP A5Q2<201843302> {
+    IN <input 1>, <input 2>, <input 3>;
+    OUT <name of output>;
+
+    PARTS:
+    NOT(<input 1>)    // I
+    AND(<input 2>, <input 3>)    // X
+    OR(I, X)    // U
+    AND(X, U)    // Z
+}
