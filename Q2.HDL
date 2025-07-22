@@ -1,6 +1,6 @@
 CHIP A5Q2<201843302> {
-    IN <input 1>, <input 2>, <input 3>;
-    OUT <name of output>;
+    IN I, X, U;
+    OUT Z;
 
     PARTS:
     NOT(<input 1>)    // I
