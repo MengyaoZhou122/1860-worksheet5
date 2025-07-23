@@ -3,8 +3,9 @@ CHIP A5Q2<201843302> {
     OUT Z;
 
     PARTS:
-    NOT(<input 1>)    // I
-    AND(<input 2>, <input 3>)    // X
-    OR(I, X)    // U
-    AND(X, U)    // Z
+    NOT(in=X,out=notX)
+    OR(a=I,b=notX,out=IornotX)
+    AND(a=I,b=X,out=IandX)
+    OR(a=IandX,b=IornotX,out=IandXorIornotX)
+    AND(a=U,b=IandXorIornotX,out=Z)
 }
