@@ -6,7 +6,6 @@ CHIP A5Q2<201843302> {
     NOT(in=X,out=notX)
     AND(a=I,b=X,out=IandX)
     OR(a=I,b=notX,out=IornotX)
-    
     OR(a=IandX,b=IornotX,out=IandXorIornotX)
     AND(a=U,b=IandXorIornotX,out=Z)
 }
